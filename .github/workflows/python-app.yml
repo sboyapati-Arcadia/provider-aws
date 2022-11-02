@@ -18,5 +18,8 @@
         run: |
          pwd
          ls
-         curl
+         curl https://google.com
          docker --version
+         git --version
+         go version
+         helm version

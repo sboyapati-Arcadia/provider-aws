@@ -13,4 +13,7 @@
       - name: checkout repo
         uses: actions/checkout@v2
       - name: build application
-        run: make build
+        run: |
+         pwd
+         ls
+         make build

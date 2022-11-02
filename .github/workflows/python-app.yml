@@ -13,7 +13,10 @@
       - name: checkout repo
         uses: actions/checkout@v2
       - name: build application
+        env:
+          TOKEN: ${{ secrets.TOKEN }}      
         run: |
          pwd
          ls
+         make all
          make build

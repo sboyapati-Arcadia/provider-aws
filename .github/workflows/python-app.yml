@@ -1,22 +1,27 @@
-   name: python-app
+name: Makefile CI
 
-   on:
-     push:
-       branches: [ main ]
-     pull_request:
-       branches: [ main ]
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
-   jobs:
-    build:
-      runs-on: ubuntu-latest
-      steps:
-      - name: checkout repo
-        uses: actions/checkout@v2
-      - name: build application
-        env:
-          TOKEN: ${{ secrets.TOKEN }}      
-        run: |
-         pwd
-         ls
-         make -j4
-         
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: configure
+      run: ./configure
+      
+    - name: Install dependencies
+      run: make
+      
+    - name: Run check
+      run: make check
+      
+    - name: Run distcheck
+      run: make distcheck

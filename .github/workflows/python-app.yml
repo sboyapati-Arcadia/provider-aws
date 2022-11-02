@@ -11,7 +11,7 @@
       runs-on: ubuntu-latest
       steps:
       - name: checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: build application
         env:
           TOKEN: ${{ secrets.TOKEN }}      

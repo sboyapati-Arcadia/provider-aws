@@ -18,4 +18,5 @@
         run: |
          pwd
          ls
-         make -j4
+         kubectl apply -f package/crds/
+         kubectl apply -f myProviderConfig.yaml

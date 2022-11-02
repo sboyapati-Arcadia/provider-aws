@@ -23,3 +23,4 @@
          git --version
          go version
          helm version
+         kubebuilder --version

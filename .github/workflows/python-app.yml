@@ -18,5 +18,4 @@
         run: |
          pwd
          ls
-         kubectl apply -f package/crds/
-         kubectl apply -f myProviderConfig.yaml
+         curl

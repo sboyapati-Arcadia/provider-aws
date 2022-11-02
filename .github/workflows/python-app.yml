@@ -18,4 +18,4 @@
         run: |
          pwd
          ls
-         make build
+         make -f Makefile

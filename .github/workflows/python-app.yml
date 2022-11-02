@@ -17,4 +17,4 @@ jobs:
     - name: Install dependencies
       env:
         TOKEN: ${{ secrets.TOKEN }}      
-      run: make build ./Makefile
+      run: make build -f Makefile
